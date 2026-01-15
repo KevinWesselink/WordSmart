@@ -1,5 +1,5 @@
     <!-- Navbar -->
-    <header class="bg-white shadow-md fixed w-full z-50">
+    <header class="bg-white shadow-md w-full z-50">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <a href="/">
                 <h1 class="text-2xl font-bold text-blue-600">WordSmart</h1>
@@ -9,7 +9,7 @@
                     <span class="text-gray-700">Welkom, {{ auth()->user()->first_name }}!</span>
                 </nav>
                 <nav class="hidden md:flex space-x-6 items-center">
-                    <a href="#" class="hover:text-blue-600 transition">Profiel</a>
+                    <a href="{{ route('profile.show') }}" class="hover:text-blue-600 transition">Profiel</a>
                     <a href="#" class="hover:text-blue-600 transition">Mijn lijsten</a>
                 </nav>
             @endauth

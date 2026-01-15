@@ -28,3 +28,22 @@ Route::post('/users/authenticate', [UserController::class, 'authenticate'])->nam
 
 // Logout User
 Route::post('/logout', [UserController::class, 'logout'])->name('logout')->middleware('auth');
+
+/*
+
+Profile routes
+
+*/
+
+
+// User Profile
+Route::get('/profile', [UserController::class, 'showProfile'])->name('profile.show')->middleware('auth');
+
+// Edit User Profile
+Route::get('/profile/edit', [UserController::class, 'editProfile'])->name('profile.edit')->middleware('auth');
+
+// Update User Profile
+Route::put('/profile', [UserController::class, 'updateProfile'])->name('profile.update')->middleware('auth');
+
+// Delete User Profile
+Route::delete('/profile', [UserController::class, 'destroyProfile'])->name('profile.delete')->middleware('auth');

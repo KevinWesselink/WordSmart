@@ -19,7 +19,7 @@
             <div class="md:w-3/5 flex justify-center items-center p-10">
                 <form action="{{ route('login.authenticate') }}" method="POST" class="bg-white shadow-md rounded-xl p-8 w-full max-w-lg">
                     @csrf
-                    <h2 class="text-2xl font-semibold text-center mb-6 text-gray-900">Maak een account aan</h2>
+                    <h2 class="text-2xl font-semibold text-center mb-6 text-gray-900">Login bij WordSmart</h2>
 
                     <div class="grid gap-4">
                         <!-- E-mail -->
