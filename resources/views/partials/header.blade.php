@@ -10,7 +10,7 @@
                 </nav>
                 <nav class="hidden md:flex space-x-6 items-center">
                     <a href="{{ route('profile.show') }}" class="hover:text-blue-600 transition">Profiel</a>
-                    <a href="#" class="hover:text-blue-600 transition">Mijn lijsten</a>
+                    <a href="{{ route('wordsmart-lists.index') }}" class="hover:text-blue-600 transition">Mijn lijsten</a>
                 </nav>
             @endauth
             <nav class="hidden md:flex space-x-6 items-center">
@@ -42,8 +42,8 @@
             @auth
                 <nav class="flex flex-col space-y-2 mb-4">
                     <span class="text-gray-700">Welkom, {{ auth()->user()->first_name }}!</span>
-                    <a href="#" class="hover:text-blue-600 transition">Profiel</a>
-                    <a href="#" class="hover:text-blue-600 transition">Mijn lijsten</a>
+                    <a href="{{ route('profile.show') }}" class="hover:text-blue-600 transition">Profiel</a>
+                    <a href="{{ route('wordsmart-lists.index') }}" class="hover:text-blue-600 transition">Mijn lijsten</a>
                 </nav>
             @endauth
             <a href="/" class="hover:text-blue-600 transition">Home</a>

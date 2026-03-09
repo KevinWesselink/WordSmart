@@ -59,4 +59,10 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function wordsmartLists()
+    {
+        return $this->hasMany(WordsmartList::class);
+    }
+
 }

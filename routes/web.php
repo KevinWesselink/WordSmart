@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WordSmartListController;
 
 Route::get('/', function () {
     return view('home');
@@ -47,3 +48,26 @@ Route::put('/profile', [UserController::class, 'updateProfile'])->name('profile.
 
 // Delete User Profile
 Route::delete('/profile', [UserController::class, 'destroyProfile'])->name('profile.delete')->middleware('auth');
+
+/*
+
+WordSmart List routes
+
+*/
+
+// WordSmart List Index
+Route::get('/wordsmart-lists', [WordSmartListController::class, 'index'])->name('wordsmart-lists.index')->middleware('auth');
+
+// WordSmart List Create
+Route::get('/wordsmart-lists/create', [WordSmartListController::class, 'create'])->name('wordsmart-lists.create')->middleware('auth');
+
+// WordSmart List Store
+Route::post('/wordsmart-lists', [WordSmartListController::class, 'store'])->name('wordsmart-lists.store')->middleware('auth');
+
+// WordSmart List Edit
+
+
+// WordSmart List Update
+
+
+// WordSmart List Delete
